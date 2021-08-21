@@ -15,6 +15,11 @@
   <link href="css/styles.css" rel="stylesheet">
   <!-- link a css del login extraido de codepen: https://codepen.io/Lewitje/pen/BNNJjo y adaptado a este proyecto -->
   <link rel="stylesheet" href="css/login.css">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id"
+    content="429634115912-2sk5tr85cp9kc7m7rcehpi7kdhr2i3s8.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   <style>
     html,
     body {
@@ -30,30 +35,28 @@
       padding-bottom: 40px;
       background-color: #f5f5f5;
     }
-
-    .signin {
-      width: 100%;
-      max-width: 330px;
-      padding: 15px;
-      margin: auto;
-    }
   </style>
 </head>
-
 
 <!-- Login template extraido de https://codepen.io/colorlib/pen/rxddKy y adaptado a este proyecto-->
 <div class="login-page">
   <img src="img/login.png" alt="JAP tu e-commerce favorito" class="img-fluid">
   <div class="form">
-    <p id="sign">Sign In</p>
+    <p id="sign">Inicia Sesion</p>
     <form class="login-form" action="homepage.html">
-      <input type="text" placeholder="username" id="user" maxlength="8" minlength="6" required />
-      <input type="password" placeholder="password" id="password" maxlength="8" minlength="6" required />
+      <input type="text" placeholder="usuario" id="user" maxlength="8" minlength="6" required />
+      <input type="password" placeholder="contraseña" id="password" maxlength="8" minlength="6" required />
       <button>login</button>
+      <p>o</p>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <p class="message">No estas registrado? <a href="#">Create una cuenta</a></p>
     </form>
   </div>
 </div>
+
+<html lang="en">
+
+
 
 <script src="js/init.js"></script>
 <script src="js/login.js"></script>
