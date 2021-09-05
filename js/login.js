@@ -1,20 +1,16 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
+
 document.addEventListener("DOMContentLoaded", function (e) {
 
 
 });
 
-//Autenticacion de google
-function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    var id_token = googleUser.getAuthResponse().id_token;
-    console.log(id_token);
-}
+
+document.getElementById("login").addEventListener("click", function () {
+    //defino una variable donde almaceno el nombre de usuario
+    let nombre = document.getElementById("user").value;
+    //con localStorage.setItem obtengo el usuario para que se almacene en localStorage.
+    localStorage.setItem("e-mail", nombre);
+});
+
 
 
