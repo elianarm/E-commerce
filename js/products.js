@@ -50,7 +50,7 @@ function showProducts() {
         //Este if determina que si minCost es indefinido (todavia no se le ingreso nada) o esta definido y esta entre minCost y maxCost muestre la lista de productos
         if (((minCost == undefined) || (minCost != undefined && products.cost >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && products.cost <= maxCost))) {
-            htmlContent += `<a href="category-info.html" class="list-group-item list-group-item-action" class="result">
+            htmlContent += `<a href="product-info.html" class="list-group-item list-group-item-action" class="result">
             <div class="row">
                 <div class="col-3">
                     <img src="` + products.imgSrc + `" alt="` + products.description + `" class="img-thumbnail">

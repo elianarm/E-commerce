@@ -25,15 +25,66 @@
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega:
-        03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
+          seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Precio</dt>
+        <dd>
+          <h4 id="costInfo"></h4>
+        </dd>
+        <dt>Cantidad de productos</dt>
+        <dd>
+          <p id="productCountInfo"></p>
+        </dd>
+
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productInfoImages">
+          </div>
+        </dd>
+      </dl>
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
+
+      <div class="comments-container">
+        <h1>Comentarios</h1>
+        <p>Califica este producto</p>
+        <h6 id="nombreUsuario"></h6>
+        <div id="calif">
+          <i class="far fa-star" data-value="1" style="color:orange"></i>
+          <i class="far fa-star" data-value="2" style="color:orange"></i>
+          <i class="far fa-star" data-value="3" style="color:orange"></i>
+          <i class="far fa-star" data-value="4" style="color:orange"></i>
+          <i class="far fa-star" data-value="5" style="color:orange"></i>
+        </div>
+
+        <textarea class="form-control" id="comment" rows="2"></textarea><br>
+        <button class="btn btn-dark" id="enviar">Enviar</button>
+      </div>
+      <div id="comentarios">
+
+        <ul id="comments-list" class="comments-list">
+          <li id="newComment">
+          </li>
+
+        </ul>
+      </div>
     </div>
-  </div>
+  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
