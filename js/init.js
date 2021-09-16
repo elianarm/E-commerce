@@ -7,6 +7,16 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/pro
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 var showSpinner = function () {
   document.getElementById("spinner-wrapper").style.display = "block";
 }
@@ -53,9 +63,9 @@ function showUser() {
   //Defino una variable a la que le agrego el texto que se mostrara en el html en la linea siguiente mediante DOM.
   let addtoNav = "";
 
-  addtoNav += `<a class="py-2 d-none d-md-inline-block" href="my-profile.html"> Hola, ` + usuario + `!</a>`;
+  addtoNav += `<a href="my-profile.html" id="usuario"><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser"> Hola, ` + usuario + `!</a>`;
   //Agrego en el div del navbar que tiene el id nav un <a></a> que contiene el nombre del ususario.
-  document.getElementById("nav").innerHTML += addtoNav;
+  document.getElementById("myTopnav").innerHTML += addtoNav;
 
 }
 showUser();
