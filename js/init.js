@@ -8,10 +8,15 @@ const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
 
+document.getElementById("sesion").addEventListener("click", function () {
+  localStorage.removeItem("e-mail");
+});
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
+
   } else {
     x.className = "topnav";
   }
@@ -63,9 +68,11 @@ function showUser() {
   //Defino una variable a la que le agrego el texto que se mostrara en el html en la linea siguiente mediante DOM.
   let addtoNav = "";
 
-  addtoNav += `<a href="my-profile.html" id="usuario"><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser"> Hola, ` + usuario + `!</a>`;
+  addtoNav += `Hola, <u>` + usuario + `</u>!`;
+
+
   //Agrego en el div del navbar que tiene el id nav un <a></a> que contiene el nombre del ususario.
-  document.getElementById("myTopnav").innerHTML += addtoNav;
+  document.getElementById("drop").innerHTML += addtoNav;
 
 }
 showUser();

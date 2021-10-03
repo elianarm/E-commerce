@@ -7,10 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>eMercado - Todo lo que busques está aquí</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
     .bd-placeholder-img {
@@ -34,14 +37,40 @@
 </head>
 
 <body>
-  <div class="topnav" id="myTopnav">
-    <a href="homepage.html" class="active">Inicio</a>
-    <a href="categories.html">Categorías</a>
-    <a href="products.html">Productos</a>
-    <a href="sell.html">Vender</a>
-    <a href="cart.html">Mi carrito</a>
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
+  <nav class="topnav" id="myTopnav">
+    <ul>
+      <li class="topnavli">
+        <a href="homepage.html" class="active">Inicio</a>
+      </li>
+      <li class="topnavli">
+        <a href="categories.html">Categorías</a>
+      </li>
+      <li class="topnavli">
+        <a href="products.html">Productos</a>
+      </li>
+      <li class="topnavli">
+        <a href="sell.html">Vender</a>
+      </li>
+      <li class="topnavli">
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </li>
+
+      <li class="dropdown" style="float:right;">
+        <button class="dropbtn topnava" id="drop"><img
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser">
+        </button>
+        <div class="dropdown-content">
+          <a href="my-profile.html">Mi Perfil</a>
+          <a href="index.html" id="sesion">Cerrar Sesion</a>
+        </div>
+      </li>
+      <li class="topnavli" style="float:right;">
+
+        <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:20px" id="iconcarrito"></i>
+          Carrito</a>
+      </li>
+    </ul>
+  </nav>
   <div class="container p-5">
     <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">¡A trabajar! :)</h4>

@@ -7,28 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
-
+  <!-- Bootstrap CSS -->
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="responsive-nav.css">
-  <script src="responsive-nav.js"></script>
+  <!--Boostrap Script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
+  <nav class="topnav" id="myTopnav">
+    <ul>
+      <li class="topnavli">
+        <a href="homepage.html" class="active">Inicio</a>
+      </li>
+      <li class="topnavli">
+        <a href="categories.html">Categorías</a>
+      </li>
+      <li class="topnavli">
+        <a href="products.html">Productos</a>
+      </li>
+      <li class="topnavli">
+        <a href="sell.html">Vender</a>
+      </li>
+      <li class="topnavli">
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </li>
 
-  <div class="topnav" id="myTopnav">
-    <a href="homepage.html" class="active">Inicio</a>
-    <a href="categories.html">Categorías</a>
-    <a href="products.html">Productos</a>
-    <a href="sell.html">Vender</a>
-    <a href="cart.html">Mi carrito</a>
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
+      <li class="dropdown" style="float:right;">
+        <button class="dropbtn topnava" id="drop"><img
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser">
+        </button>
+        <div class="dropdown-content">
+          <a href="my-profile.html">Mi Perfil</a>
+          <a href="index.html" id="sesion">Cerrar Sesion</a>
+        </div>
+      </li>
+      <li class="topnavli" style="float:right;">
 
+        <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:20px" id="iconcarrito"></i>
+          Carrito</a>
+      </li>
+    </ul>
+  </nav>
   <main role="main">
     <div class="container mt-5">
       <div class="text-center p-4">
@@ -37,27 +62,66 @@
         <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
           seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
       </div>
-      <h3 id="productName"></h3>
+      <h3><b id="productName"></b></h3>
       <hr class="my-3">
       <dl>
 
-        <dt>Descripción</dt>
+        <dt>
+          <h5><b>Descripción</b></h5>
+        </dt>
         <dd>
           <p id="productDescription"></p>
         </dd>
 
-        <dt>Precio</dt>
+        <dt>
+          <h5><b>Precio</b></h5>
+        </dt>
         <dd>
           <h4 id="costInfo"></h4>
         </dd>
-        <dt>Cantidad de productos</dt>
+        <dt>
+          <h5 id="productCountInfo">
+            <b>Cantidad de productos: </b>
+          </h5>
+          <p></p>
+        </dt>
         <dd>
-          <p id="productCountInfo"></p>
+
         </dd>
 
-        <dt>Imágenes ilustrativas</dt>
+        <dt>
+          <h5><b>Imágenes ilustrativas</b></h5>
+        </dt>
+        <!--CAROUSEL-->
         <dd>
-          <div class="row text-center text-lg-left pt-2" id="productInfoImages">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner" id="productInfoImages">
+
+            </div>
+            <a class="left carousel-control-prev" role="button" href="#myCarousel" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control-next" role="button" href="#myCarousel" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </dd>
+        <br>
+        <!--PRODUCTOS-->
+        <dd>
+          <h5><b>Productos Relacionados</b></h5>
+          <div class="row" id="relatedProd">
+
           </div>
         </dd>
       </dl>

@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 
     //Obtengo el json de los comentarios.
+    getJSONData(PRODUCTS_URL).then(function (resultObj) {
+        if (resultObj.status === "ok") {
+            Products = resultObj.data;
+        };
+        showRelatedProd();
+    })
+
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {
             ProductsComments = resultObj.data;
@@ -20,6 +27,32 @@ document.addEventListener("DOMContentLoaded", function (e) {
     })
 
 });
+
+//Funcion que devuelve los productos relacionados.
+function showRelatedProd() {
+    let htmlRelated = "";
+    //Este array es el array dentro de ProductsInfo llamado relatedProducts.
+    let ProductsRelated = ProductsInfo.relatedProducts
+    //Este for va de 0 a 2
+    for (let i = 0; i < ProductsRelated.length; i++) {
+        //Defino una variable como el array Products related para llamarlo luego.
+        //Mas abajo llamo a Products que es lo que devuelve el json PRODUCT.
+        //LLamo a los productos que ocupan la misma posicion que indica el array relatedProducts, es decir 1 y 3 
+        //y con el for recorro products para encontrarlos y mostrarlos luego.
+        const related = ProductsRelated[i];
+        htmlRelated += `
+        <div class="relatedCards card text-center">
+        <img src="`+ Products[related].imgSrc + `" alt="imagen" style="width:100%" >
+        <div class="container">
+        <h5><b>`+ Products[related].name + `</b></h5> 
+        <p>`+ Products[related].description + `</p> 
+        <h6>`+ Products[related].currency + `$` + Products[related].cost + `</h6>
+        <a type="button" class="btn btn-dark" href="product-info.html" id="verprod">Ver producto</a><br><br>
+        </div>
+        </div>`
+    }
+    document.getElementById("relatedProd").innerHTML += htmlRelated;
+}
 
 //Esta funcion muestra la informacion del producto mediante DOM.
 function showProductsInfo() {
@@ -38,14 +71,15 @@ function showProductsInfo() {
 function showProductsImages() {
     let imagenes = document.getElementById("productInfoImages");
     let htmlProductsInfo = "";
-    for (let i = 0; i < ProductsInfo.images.length; i++) {
+    htmlProductsInfo += `<div class="carousel-item active item">
+    <img src="`+ ProductsInfo.images[0] + `" class="d-block w-100" alt="..." />
+    </div>`
+    for (let i = 1; i < ProductsInfo.images.length; i++) {
         let image = ProductsInfo.images[i];
         htmlProductsInfo += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + image + `" alt="">
-            </div>
-        </div>
+        <div class="carousel-item item" id="image`+ i + `">
+                <img src="`+ image + `" class="d-block w-100" alt="..." />
+              </div>
         `
     }
 
@@ -167,5 +201,3 @@ function showComments() {
     //agrega los comentarios a comments-list para que se muestren en html
     document.getElementById("comments-list").innerHTML += comentarios;
 }
-
-
