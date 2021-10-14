@@ -487,3 +487,20 @@ ul {
 	 margin-right: 10px ;
 	 margin-top: 4px;
  }
+
+.formEnvio{
+   width: 200px;
+   margin-left: 15px;
+}
+
+#dire{
+	margin-right: 20px;
+}
+
+.cantidad{
+	width: 50px;
+}
+
+.imgCart{
+	margin: 20px;
+}

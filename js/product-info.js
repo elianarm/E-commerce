@@ -9,15 +9,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
         };
         showProductsImages();
         showProductsInfo();
+
+        getJSONData(PRODUCTS_URL).then(function (resultObj) {
+            if (resultObj.status === "ok") {
+                Products = resultObj.data;
+            };
+            showRelatedProd();
+        })
+
     });
 
-    //Obtengo el json de los comentarios.
-    getJSONData(PRODUCTS_URL).then(function (resultObj) {
-        if (resultObj.status === "ok") {
-            Products = resultObj.data;
-        };
-        showRelatedProd();
-    })
 
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {

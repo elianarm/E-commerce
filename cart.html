@@ -14,6 +14,8 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel=”stylesheet” href=”css/bootstrap.css”>
+  <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -53,7 +55,6 @@
       <li class="topnavli">
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </li>
-
       <li class="dropdown" style="float:right;">
         <button class="dropbtn topnava" id="drop"><img
             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser">
@@ -70,29 +71,72 @@
       </li>
     </ul>
   </nav>
-  <div class="container p-5">
+  <div class="table-responsive container p-5">
+    <table class="table">
+      <thead>
+        <th>Artículo</th>
+        <th>Costo</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+      </thead>
+      <tbody id="info">
 
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega:
-        14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+      </tbody>
+      <tfoot id="total">
+        <tr>
+          <th colspan="2"></th>
+          <th>Total</th>
+          <td colspan="3" id="totaltd">UYU 500200</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div id="formCart">
+      <div class="d-block my-3">
+        <h5><b>Tipo de envio</b> </h5>
+        <form>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio"><label for="envio">Premium 2 a 5 dias
+              (15%)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio"><label for="envio">Express 5 a 8
+              dias(7%)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio"><label for="envio">Estándar 12 a 15 dias
+              (5%)</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="d-block my-3">
+        <h5><b>Dirección de envío</b> </h5>
+        <form>
+          <div class="mb-3 row">
+            <input type="text" class="form-control formEnvio" placeholder="Direccion" id="dire">
+            <input type="text" class="form-control formEnvio" placeholder="Numero">
+          </div>
+          <div class="mb-3 row">
+            <input type="text" class="form-control formEnvio" placeholder="Esquina">
+          </div>
+        </form>
+      </div>
+
     </div>
-  </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
