@@ -22,39 +22,39 @@
 </head>
 
 <body>
-  <nav class="topnav" id="myTopnav">
-    <ul>
-      <li class="topnavli">
-        <a href="homepage.html" class="active">Inicio</a>
-      </li>
-      <li class="topnavli">
-        <a href="categories.html">Categorías</a>
-      </li>
-      <li class="topnavli">
-        <a href="products.html">Productos</a>
-      </li>
-      <li class="topnavli">
-        <a href="sell.html">Vender</a>
-      </li>
-      <li class="topnavli">
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-      </li>
-      <li class="dropdown" style="float:right;">
-        <button class="dropbtn topnava" id="drop"><img
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser">
-        </button>
-        <div class="dropdown-content">
-          <a href="my-profile.html">Mi Perfil</a>
-          <a href="index.html" id="sesion">Cerrar Sesion</a>
-        </div>
-      </li>
-
-      <li class="topnavli" style="float:right;">
-
-        <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:20px" id="iconcarrito"></i>
-          Carrito</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=""></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" onclick="myFunction()"></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="cart.html"> Carrito</a></li>
+              <li><a class="dropdown-item" href="index.html" id="sesion">Cerrar Sesion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <main role="main">

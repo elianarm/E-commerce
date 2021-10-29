@@ -73,7 +73,7 @@ function showUser() {
 
 
   //Agrego en el div del navbar que tiene el id nav un <a></a> que contiene el nombre del ususario.
-  document.getElementById("drop").innerHTML += addtoNav;
+  document.getElementById("navbarScrollingDropdown").innerHTML += addtoNav;
 
 }
 showUser();

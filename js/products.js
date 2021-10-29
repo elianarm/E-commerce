@@ -50,21 +50,18 @@ function showProducts() {
         //Este if determina que si minCost es indefinido (todavia no se le ingreso nada) o esta definido y esta entre minCost y maxCost muestre la lista de productos
         if (((minCost == undefined) || (minCost != undefined && products.cost >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && products.cost <= maxCost))) {
-            htmlContent += `<a href="product-info.html" class="list-group-item list-group-item-action" class="result">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + products.imgSrc + `" alt="` + products.description + `" class="img-thumbnail">
+            htmlContent += `
+            <div class="col-md-6" >
+            <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                <img class="bd-placeholder-img card-img-top" src="` + products.imgSrc + `">
+                <h3 class="m-3">`+ products.name + ` (` + products.soldCount + `)</h3>
+                <div class="card-body">
+                    <p class="card-text">` + products.description + `</p>
+                    <p class="card-text">`+ products.currency + products.cost + `</p>
                 </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ products.name + `</h4>
-                        <small class="text-muted">` + products.soldCount + ` artículos</small>
-                    </div>
-                    <p class="mb-1">` + products.description + `</p>
-                    <p class="mb-1">Precio: `+ products.currency + products.cost + `</p>
-                </div>
-            </div> 
-        </a>`
+            </a>
+            </div>
+           `
 
         }
         //Mediante DOM se muestra lo que escribi en el for introduciendolo en la variable htmContent definida al principio de esta funcion

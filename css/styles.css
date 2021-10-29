@@ -29,12 +29,12 @@
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
-}
+} */
 
 .jumbotron p:last-child {
   margin-bottom: 0;
@@ -345,7 +345,7 @@ ul {
 }
 
 /* navba responsive*/
-
+/* 
 .topnav {
 	overflow: hidden;
 	background-color: #343a40;
@@ -434,7 +434,7 @@ ul {
   #homepageimg {
 	width: 100%
 	
-  }
+  } */
 
   /** Cards Products Related **/
 
@@ -454,7 +454,7 @@ ul {
   }
   
 /** Dropdown **/
-.dropbtn {
+/* .dropbtn {
 	background-color: #343a40;
 	color: white;
 	padding: 16px;
@@ -479,7 +479,7 @@ ul {
   }
   .dropdown-content a:hover {background-color: #f1f1f1;}
   .dropdown:hover .dropdown-content {display: block;}
-  .dropdown:hover .dropbtn {background-color: #3d99bc;}
+  .dropdown:hover .dropbtn {background-color: #3d99bc;} */
   
 /* Carrito  */
   
@@ -504,3 +504,64 @@ ul {
 .imgCart{
 	margin: 20px;
 }
+
+/*profile*/
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+#image_input{
+	margin-left: 95px;
+}
+
+#display_image{
+	width: 200px;
+	height: 200px;
+	border-radius: 250px;
+	background-position: center;
+	background-size: cover;
+  }
+
+  #myimage {
+	  width: 200px;
+	height: 200px;
+  }

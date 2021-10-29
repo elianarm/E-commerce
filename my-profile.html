@@ -10,76 +10,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="topnav" id="myTopnav">
-    <ul>
-      <li class="topnavli">
-        <a href="homepage.html" class="active">Inicio</a>
-      </li>
-      <li class="topnavli">
-        <a href="categories.html">Categorías</a>
-      </li>
-      <li class="topnavli">
-        <a href="products.html">Productos</a>
-      </li>
-      <li class="topnavli">
-        <a href="sell.html">Vender</a>
-      </li>
-      <li class="topnavli">
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-      </li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homepage.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=""></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" onclick="myFunction()"></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="cart.html"> Carrito</a></li>
+              <li><a class="dropdown-item" href="index.html" id="sesion">Cerrar Sesion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-      <li class="dropdown" style="float:right;">
-        <button class="dropbtn topnava" id="drop"><img
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="imguser">
-        </button>
-        <div class="dropdown-content">
-          <a href="my-profile.html">Mi Perfil</a>
-          <a href="index.html" id="sesion">Cerrar Sesion</a>
-        </div>
-      </li>
-      <li class="topnavli" style="float:right;">
-
-        <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:20px" id="iconcarrito"></i>
-          Carrito</a>
-      </li>
-    </ul>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <div class="container-fluid" id="alert">
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 border-right">
+      <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+
+        <div class="mb-2" id="display_image">
+          <img src="img/profile-picture.png" class="rounded-circle" alt="" id="myimage">
+        </div>
+
+
+
+        <div class="mb-3">
+          <label id="name-saved"> <strong>Ingrese una foro de perfil</strong></label>
+          <br>
+          <label id="email-saved"></label>
+        </div>
+        <div class="mb-2">
+          <input type="file" id="image_input">
+          <br>
+          <br>
+          <button type="button" class="btn btn-secondary" onclick="showProfilePicture()">Guardar</button>
+
+
+
+        </div>
+
+
+
+
+
+        <span class="font-weight-bold" id="name-saved"></span>
+        <span class="text-black-50" id="email-saved"></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="col-md-5 border-right">
+      <div class="p-3 py-5">
+
+        <br>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Mi Perfil</h4>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-md-6"><label class="labels">Primer Nombre</label><input type="text" class="form-control"
+              placeholder="primer nombre" name="nombre" id="name"></div>
+          <div class="col-md-6"><label class="labels">Segundo Nombre</label><input type="text" class="form-control"
+              value="" placeholder="segundo nombre" id="name-2"></div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6"><label class="labels">Primer Apellido</label><input type="text" class="form-control"
+              placeholder="primer apellido" id="surname"></div>
+          <div class="col-md-6"><label class="labels">Segundo Apellido</label><input type="text" class="form-control"
+              placeholder="segundo apellido" id="surname-2"></div>
+        </div>
+
+        <div class="row mt-3">
+
+
+          <div class="col-md-12"><label class="labels">Número de Contacto</label><input type="text" class="form-control"
+              placeholder="ingrse un numero de telefono" id="num"></div>
+
+          <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control"
+              placeholder="ingrese un email" id="mail"></div>
+        </div>
+
+        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" id="save-profile"
+            onclick="saveProfile()">Guardar
+            Cambios</button></div>
+      </div>
+
     </div>
   </div>
+  </div>
+  </div>
+  </div>
+
   <footer class="text-muted bg-light">
+
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
