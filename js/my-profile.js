@@ -1,5 +1,5 @@
 
-//funcion que muestra la foto que subimos al input choose image para el perfil
+//funcion que muestra la foto que subimos al input choose image para el perfil, es llamada mediante onclick en el boton guardar
 function showProfilePicture() {
     let myimage = document.getElementById("myimage");
     let file = document.getElementById("image_input").files[0];
@@ -21,7 +21,7 @@ function showProfilePicture() {
 
 }
 
-//funcion que guarda cada uno de los datos y los pasa a un json que se almacenara en el localStorage
+//funcion que guarda cada uno de los datos y los pasa a un json que se almacenara en el localStorage, es llamada mediante onclick en el boton guardar cambios
 function saveProfile() {
 
 
