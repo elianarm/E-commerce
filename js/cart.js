@@ -92,8 +92,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
     })
 
 
-
-
 });
 
 
@@ -106,7 +104,7 @@ function updateTotal() {
 
     for (let i = 0; i < productsCart.length; i++) {
         cost = productsCart[i].unitCost;
-        cant = document.getElementById(i).value;
+        cant = document.getElementById("cant" + i).value;
 
         document.getElementById("sub" + i).innerHTML = productsCart[i].currency + cost * cant;
         if (productsCart[i].currency != "UYU") {
@@ -119,7 +117,7 @@ function updateTotal() {
     }
 
     //porcenvio proviene de los eventos change que llamamos en el DOMContentLoaded
-    envio = porcenvio * subtotal;
+    envio = Math.round(porcenvio * subtotal);
     total = subtotal + envio;
 
     //agrego al html los resutlados
@@ -138,22 +136,48 @@ function getCart(url) {
 
 }
 
+
+
 function showCartInfo() {
     let htmlCart = " ";
 
     for (let i = 0; i < productsCart.length; i++) {
         const prodCarrito = productsCart[i];
         htmlCart += ` 
-        <tr id="prod${i}">
-            
+        <tr id="${"prod" + i}">
             <td class="align-middle">
-            <a href="#"><img src="img/trash.png" style="width:45px;height:45px;" id="trash${i}" onclick="removeProd()"></a>
+            <a href="#"><img src="img/trash.png" style="width:30px;height:30px;" id=${i} class="trash" onclick="removeProd()"></a>
             <img class="imgCart" src="${prodCarrito.src}" alt="" width="200px">${prodCarrito.name}</td>
             <td class="align-middle">${prodCarrito.currency}${prodCarrito.unitCost}</td>
-            <td class="align-middle"><input type="number" min ="1" value=${prodCarrito.count} id ="${i}" class="cantidad" onchange ="updateTotal()"></td>
+            <td class="align-middle"><input type="number" min ="1" value=${prodCarrito.count} id ="${"cant" + i}" class="cantidad" onchange = "updateTotal()" ></td >
             <td class="align-middle" id=${"sub" + i}>${prodCarrito.currency} ${prodCarrito.unitCost * prodCarrito.count}</td>
-        </tr>`
+        </tr > `
+
+
+
     }
     document.getElementById("info").innerHTML += htmlCart;
+
+
+
+
 }
+
+function removeProd() {
+
+    const onClick = function () {
+        let prodremoved = document.getElementById("prod" + this.id);
+
+        prodremoved.remove();
+
+    }
+
+    document.getElementById('0').onclick = onClick;
+    document.getElementById('1').onclick = onClick;
+
+
+}
+
+
+
 
