@@ -42,14 +42,14 @@ function showRelatedProd() {
         //y con el for recorro products para encontrarlos y mostrarlos luego.
         const related = ProductsRelated[i];
         htmlRelated += `
-        <div class="relatedCards card text-center">
-        <img src="`+ Products[related].imgSrc + `" alt="imagen" style="width:100%" >
-        <div class="container">
-        <h5><b>`+ Products[related].name + `</b></h5> 
-        <p>`+ Products[related].description + `</p> 
-        <h6>`+ Products[related].currency + `$` + Products[related].cost + `</h6>
-        <a type="button" class="btn btn-dark" href="product-info.html" id="verprod">Ver producto</a><br><br>
-        </div>
+        <div class="relatedCards custom-card card text-center col-md-3">
+            <img src="`+ Products[related].imgSrc + `" alt="imagen" style="width:100%" >
+            <div class="container prodcards">
+                <h5><b>`+ Products[related].name + `</b></h5> 
+                <p>`+ Products[related].description + `</p> 
+                <h6>`+ Products[related].currency + `$` + Products[related].cost + `</h6>
+                <a type="button" class="btn btn-dark" href="product-info.html" id="verprod">Ver producto</a><br><br>
+            </div>
         </div>`
     }
     document.getElementById("relatedProd").innerHTML += htmlRelated;
@@ -182,21 +182,21 @@ function showComments() {
         let comment = ProductsComments[i];
         comentarios +=
             `<li>
-        <div class="comment-main-level"> 
-        <div class="comment-avatar"><img
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" width="50px"></div>
-        <div class="comment-box">
-          <div class="comment-head">
-            <h6 class="comment-name by-author"><a href="product-info.html">` + comment.user + `</a></h6>
-            <span>` + drawStars(comment.score) + `</span>
-            <i>` + comment.dateTime + `</i>
-							
-          </div>
-          <div class="comment-content">`
+            <div class="comment-main-level"> 
+                <div class="comment-avatar"><img
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" width="50px">
+                </div>
+                <div class="comment-box">
+                    <div class="comment-head">
+                        <h6 class="comment-name by-author"><a href="product-info.html">` + comment.user + `</a></h6>
+                        <span>` + drawStars(comment.score) + `</span>
+                        <i>` + comment.dateTime + `</i>						
+                    </div>
+                    <div class="comment-content">`
             + comment.description +
             `</div>
-        </div>
-      </div>
+                </div>
+            </div>
       </li>`;
     }
     //agrega los comentarios a comments-list para que se muestren en html
