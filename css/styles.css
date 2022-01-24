@@ -4,9 +4,21 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	;
+	
 }
 
+.album {
+	background-image: linear-gradient(to bottom, #ffb3dc, #ffb3c6, #ffb7af, #ffbf9b, #ffca8e);
+}
+
+.text-muted{
+	background-image: linear-gradient(to bottom, #ffca8e, #ffcf88, #ffd482, #ffda7c, #ffe076);
+
+}
+
+.img-fluid{
+	height: 120px;
+}
 
 .jumbotron, .card-body, .container, .site-header{
     font-family: 'Raleway', serif !important;
