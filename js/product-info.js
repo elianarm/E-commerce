@@ -43,7 +43,7 @@ function showRelatedProd() {
         const related = ProductsRelated[i];
         htmlRelated += `
         <div class="relatedCards custom-card card text-center col-md-3">
-            <img src="`+ Products[related].imgSrc + `" alt="imagen" style="width:100%" >
+            <img src="`+ Products[related].imgSrc + `" alt="imagen" style="width:100%" class="imgrelated">
             <div class="container prodcards">
                 <h5><b>`+ Products[related].name + `</b></h5> 
                 <p>`+ Products[related].description + `</p> 

@@ -62,93 +62,90 @@
     </div>
 
   </nav>
-
-  <div class="container-fluid" id="alert">
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-3 border-right">
-      <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-
-        <div class="mb-2" id="display_image">
-          <img src="img/profile-picture.png" class="rounded-circle" alt="" id="myimage">
-        </div>
-
-
-
-        <div class="mb-3">
-          <label id="name-saved"> <strong>Ingrese una foro de perfil</strong></label>
-          <br>
-          <label id="email-saved"></label>
-        </div>
-        <div class="mb-2">
-          <input type="file" id="image_input">
-          <br>
-          <br>
-          <button type="button" class="btn btn-secondary" onclick="showProfilePicture()">Guardar</button>
-
-
-
-        </div>
-
-
-
-
-
-        <span class="font-weight-bold" id="name-saved"></span>
-        <span class="text-black-50" id="email-saved"></span>
-        <span></span>
-      </div>
-    </div>
-
-    <div class="col-md-5 border-right">
-      <div class="p-3 py-5">
-
-        <br>
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4 class="text-right">Mi Perfil</h4>
-        </div>
-
-        <div class="row mt-2">
-          <div class="col-md-6"><label class="labels">Primer Nombre</label><input type="text" class="form-control"
-              placeholder="primer nombre" name="nombre" id="name"></div>
-          <div class="col-md-6"><label class="labels">Segundo Nombre</label><input type="text" class="form-control"
-              value="" placeholder="segundo nombre" id="name-2"></div>
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-6"><label class="labels">Primer Apellido</label><input type="text" class="form-control"
-              placeholder="primer apellido" id="surname"></div>
-          <div class="col-md-6"><label class="labels">Segundo Apellido</label><input type="text" class="form-control"
-              placeholder="segundo apellido" id="surname-2"></div>
-        </div>
-
-        <div class="row mt-3">
-
-
-          <div class="col-md-12"><label class="labels">Número de Contacto</label><input type="text" class="form-control"
-              placeholder="ingrse un numero de telefono" id="num"></div>
-
-          <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control"
-              placeholder="ingrese un email" id="mail"></div>
-        </div>
-
-        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" id="save-profile"
-            onclick="saveProfile()">Guardar
-            Cambios</button></div>
-      </div>
+  <main class="album">
+    <div class="container-fluid" id="alert">
 
     </div>
-  </div>
-  </div>
-  </div>
-  </div>
 
-  <footer class="text-muted bg-light">
+    <div class="row">
+      <div class="col-md-3 border-right">
+        <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+
+          <div class="mb-2" id="display_image">
+            <img src="img/profile-picture.png" class="rounded-circle" alt="" id="myimage">
+          </div>
+
+
+
+          <div class="mb-3">
+            <label id="name-saved"> <strong>Ingrese una foro de perfil</strong></label>
+            <br>
+            <label id="email-saved"></label>
+          </div>
+          <div class="mb-2">
+            <input type="file" id="image_input" class="button_img">
+
+          </div>
+
+
+
+
+
+          <span class="font-weight-bold" id="name-saved"></span>
+          <span class="text-black-50" id="email-saved"></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="col-md-5 border-right">
+        <div class="p-3 py-5">
+
+          <br>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="text-right labels">Mi Perfil</h1>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-6"><label class="labels">Primer Nombre</label><input type="text" class="form-control"
+                placeholder="primer nombre" name="nombre" id="name"></div>
+            <div class="col-md-6"><label class="labels">Segundo Nombre</label><input type="text" class="form-control"
+                value="" placeholder="segundo nombre" id="name-2"></div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6"><label class="labels">Primer Apellido</label><input type="text" class="form-control"
+                placeholder="primer apellido" id="surname"></div>
+            <div class="col-md-6"><label class="labels">Segundo Apellido</label><input type="text" class="form-control"
+                placeholder="segundo apellido" id="surname-2"></div>
+          </div>
+
+          <div class="row mt-3">
+
+
+            <div class="col-md-12"><label class="labels">Número de Contacto</label><input type="text"
+                class="form-control" placeholder="ingrse un numero de telefono" id="num"></div>
+
+            <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control"
+                placeholder="ingrese un email" id="mail"></div>
+          </div>
+
+          <div class="mt-5 text-center"><button class="btn btn-primary buttons" type="button" id="save-profile"
+              onclick="saveProfile();showProfilePicture()">Guardar
+              Cambios</button></div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+  </main>
+
+  <footer class="text-muted bg-light footerColor">
 
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf" class="links">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
   <div class="alert fade alert-success" role="alert" id="alertResult">

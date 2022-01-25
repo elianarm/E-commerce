@@ -63,168 +63,172 @@
       </div>
     </div>
   </nav>
-  <div id="alert_compra">
 
-  </div>
-  <div class="table-responsive container p-5">
-    <table class="table">
-      <thead>
-        <th>Artículo</th>
-        <th>Costo</th>
-        <th>Cantidad</th>
-        <th>Subtotal</th>
-      </thead>
-      <tbody id="info">
+  <main class="album">
+    <div id="alert_compra">
 
-      </tbody>
-
-      <tfoot id="total">
-        <tr>
-          <th colspan="2"></th>
-          <th>Envio</th>
-          <td colspan="3" id="envio"></td>
-        </tr>
-        <tr>
-          <th colspan="2"></th>
+    </div>
+    <div class="table-responsive container p-5">
+      <table class="table">
+        <thead>
+          <th>Artículo</th>
+          <th>Costo</th>
+          <th>Cantidad</th>
           <th>Subtotal</th>
-          <td colspan="3" id="subtotal">UYU 500200</td>
-        </tr>
-        <tr>
-          <th colspan="2"></th>
-          <th>Total</th>
-          <td colspan="3" id="totaltd">UYU 500200</td>
-        </tr>
-      </tfoot>
-    </table>
+        </thead>
+        <tbody id="info">
 
-    <div id="formCart">
-      <div class="d-block my-3">
-        <h5><b>Tipo de envio</b> </h5>
-        <form>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="envio" id="premium" class="envio" value="15"><label
-              for="envio">Premium
-              2 a 5 dias
-              (15%)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="envio" id="express" class="envio" value="7"><label
-              for="envio">Express
-              5 a 8
-              dias(7%)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="envio" id="estandar" class="envio" value="5"><label
-              for="envio">Estándar 12 a 15
-              dias
-              (5%)</label>
-          </div>
-        </form>
-      </div>
-      <form>
+        </tbody>
 
+        <tfoot id="total">
+          <tr>
+            <th colspan="2"></th>
+            <th>Envio</th>
+            <td colspan="3" id="envio"></td>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <th>Subtotal</th>
+            <td colspan="3" id="subtotal">UYU 500200</td>
+          </tr>
+          <tr>
+            <th colspan="2"></th>
+            <th>Total</th>
+            <td colspan="3" id="totaltd">UYU 500200</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div id="formCart">
         <div class="d-block my-3">
-          <h5><b>Dirección de envío</b> </h5>
-          <div class="mb-3 row">
-
-            <input type="text" class="form-control formEnvio " placeholder="Direccion" id="formdir1" required>
-
-            <input type="text" class="form-control formEnvio " placeholder="Numero" id="formdir2" required>
-
-          </div>
-
-          <div class="mb-3 row">
-
-            <input type="text" class="form-control formEnvio" placeholder="Esquina">
-
-          </div>
-
+          <h5><b>Tipo de envio</b> </h5>
+          <form>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="envio" id="premium" class="envio" value="15"><label
+                for="envio">Premium
+                2 a 5 dias
+                (15%)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="envio" id="express" class="envio" value="7"><label
+                for="envio">Express
+                5 a 8
+                dias(7%)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="envio" id="estandar" class="envio" value="5"><label
+                for="envio">Estándar 12 a 15
+                dias
+                (5%)</label>
+            </div>
+          </form>
         </div>
+        <form>
 
-        <button class="btn btn-primary">Guardar Direccion</button>
-      </form>
+          <div class="d-block my-3">
+            <h5><b>Dirección de envío</b> </h5>
+            <div class="mb-3 row">
+
+              <input type="text" class="form-control formEnvio " placeholder="Direccion" id="formdir1" required>
+
+              <input type="text" class="form-control formEnvio " placeholder="Numero" id="formdir2" required>
+
+            </div>
+
+            <div class="mb-3 row">
+
+              <input type="text" class="form-control formEnvio" placeholder="Esquina">
+
+            </div>
+
+          </div>
+
+          <button class="btn btn-primary">Guardar Direccion</button>
+        </form>
 
 
-      <br>
+        <br>
 
 
-      <h5><b>Método de Pago</b></h5>
-      <div class="d-block my-3">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-          Ingrese un metodo de pago
-        </button>
+        <h5><b>Método de Pago</b></h5>
+        <div class="d-block my-3">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+            Ingrese un metodo de pago
+          </button>
 
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Ingrese un metodo de pago</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
+          <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Ingrese un metodo de pago</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
 
-                <div class="form-check">
+                  <div class="form-check">
 
-                  <input class="form-check-input pago" type="radio" name="pago" id="credito"><label for="pago">Tarjeta
-                    de Crédito</label>
-                  <form id="form1">
-                    <input type="text" placeholder="Numero de Cuenta" class="form-control credito_form" id="cred1">
-                    <br>
-                    <label for="">Vencimiento</label>
-                    <div class="mb-3 row">
-                      <input type="date" class="form-control formEnvio credito_form" placeholder="Fecha" id="cred2">
+                    <input class="form-check-input pago" type="radio" name="pago" id="credito"><label for="pago">Tarjeta
+                      de Crédito</label>
+                    <form id="form1">
+                      <input type="text" placeholder="Numero de Cuenta" class="form-control credito_form" id="cred1">
+                      <br>
+                      <label for="">Vencimiento</label>
+                      <div class="mb-3 row">
+                        <input type="date" class="form-control formEnvio credito_form" placeholder="Fecha" id="cred2">
 
-                      <input type="text" class="form-control formEnvio credito_form" placeholder="CVC" id="cred3">
-                    </div>
+                        <input type="text" class="form-control formEnvio credito_form" placeholder="CVC" id="cred3">
+                      </div>
 
-                  </form>
+                    </form>
+
+                  </div>
+
+                  <div class="form-check">
+
+
+                    <input class="form-check-input pago" type="radio" name="pago" id="transferencia"><label
+                      for="pago">Transferencia Bancaria</label>
+                    <form id="form2">
+                      <input type="text" placeholder="Numero de Cuenta" class="form-control transf_form" id="transf1">
+
+                    </form>
+
+
+                  </div>
+
 
                 </div>
-
-                <div class="form-check">
-
-
-                  <input class="form-check-input pago" type="radio" name="pago" id="transferencia"><label
-                    for="pago">Transferencia Bancaria</label>
-                  <form id="form2">
-                    <input type="text" placeholder="Numero de Cuenta" class="form-control transf_form" id="transf1">
-
-                  </form>
-
-
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary formEnvio" id="comprar">Comprar</button>
                 </div>
 
 
+
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary formEnvio" id="comprar">Comprar</button>
-              </div>
-
-
-
             </div>
           </div>
         </div>
-      </div>
 
-    </div>
-    <div id="spinner-wrapper">
-      <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
+  </main>
+
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/cart.js"></script>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 
 </html>
