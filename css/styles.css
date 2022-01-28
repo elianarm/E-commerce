@@ -7,22 +7,24 @@
 	
 }
 
+.navbar {
+	background-color: #548AFF;
+}
+
+.nav-link{
+	color: #FFFFFF !important;
+}
+
+.navbar-brand{
+	color: #FFFFFF !important;
+}
+
 h2{
-	color: #FFFFFF;
+	color: #000000;
 }
 p{
-	color: #FFFFFF;
+	color: #000000;
 }
-
-.album {
-	background-image: linear-gradient(to bottom, #ffb3dc, #ffb3c6, #ffb7af, #ffbf9b, #ffca8e);
-}
-
-.footerColor {
-	background-image: linear-gradient(to bottom, #ffca8e, #ffcf88, #ffd482, #ffda7c, #ffe076);
-
-}
-
 
 
 .imgrelated {
@@ -47,7 +49,7 @@ p{
 }
 .buttons:hover {
 	background-color: #FFCA8E;
-	box-shadow: 0px 15px 20px #f9f9719d;
+	box-shadow: 0px 15px 20px #548AFF;
 	color: #fff;
 	transform: translateY(-7px);
 }
@@ -55,14 +57,11 @@ p{
 
 /* Cards style */
 
-.card {
-	background-image: linear-gradient(to bottom, #ffb3dc, #ffb3c6, #ffb7af, #ffbf9b, #ffca8e);
 
-}
 
 .jumbotron, .card-body, .container, .site-header{
     font-family: 'Raleway', serif !important;
-	color: #FFF;
+	color: rgb(0, 0, 0);
 }
 
 .jumbotron .display-4{
@@ -446,15 +445,15 @@ ul {
 /*profile*/
 
 .labels {
-	 color: #FFFFFF;
+	 color: #000000;
 }
 
 #name-saved {
-	 color: #FFFFFF;
+	 color: #000000;
 }
 
 #email-saved {
-	color: #FFFFFF;
+	color: #000000;
 }
 
 
@@ -517,5 +516,5 @@ ul {
 
   
 .links {
-	color: #F9F871 !important; 
+	color: #548AFF !important; 
 }
