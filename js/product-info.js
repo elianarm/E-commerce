@@ -151,21 +151,22 @@ function submitComment() {
         let date = today.getFullYear() + '-' + ("0" + (today.getMonth() + 1)).slice(-2) + "-" + today.getDate() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         let user = localStorage.getItem("e-mail");
         //Array creado al principio del documento.
-        comentariosNuevos += `
+        comentariosNuevos = `
         <div class="comment-main-level">
-        <div class="comment-avatar"><img
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""></div>
-        <div class="comment-box">
-          <div class="comment-head">
-            <h6 class="comment-name by-author"><a href="product-info.html">` + user + `</a></h6>
-			<span id="submitStars">` + drawStars(calificacion) + `</span>
-            <i>` + date + `</i>
-          </div>
-          <div class="comment-content">`
+            <div class="comment-avatar">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="comment-head">
+                    <h6 class="comment-name by-author"><a href="product-info.html">` + user + `</a></h6>
+			        <span id="submitStars">` + drawStars(calificacion) + `</span>
+                    <i>` + date + `</i>
+                </div>
+                <div class="comment-content">`
             + comment +
             `</div>
-        </div>
-      </div>`
+            </div>
+        </div>`
         //newComment es un li en html para agregar los nuevos comentarios por encima de los viejos
         document.getElementById("newComment").innerHTML += comentariosNuevos;
 

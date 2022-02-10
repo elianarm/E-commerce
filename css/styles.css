@@ -372,19 +372,41 @@ ul {
 
 
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 1400px) {
 	.comments-container {
-		width: 480px;
+		width: 1000px;
 	}
 
 	.comments-list .comment-box {
-		width: 390px;
+		width: 900px;
 	}
 
 
 }
 
+@media only screen and (max-width: 1000px) {
+	.comments-container {
+		width: 500px;
+	}
 
+	.comments-list .comment-box {
+		width: 500px;
+	}
+
+
+}
+
+@media only screen and (max-width: 550px) {
+	.comments-container {
+		width: 250px;
+	}
+
+	.comments-list .comment-box {
+		width: 250px;
+	}
+
+
+}
 
 .far {
 	color: orange;
